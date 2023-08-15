@@ -16,6 +16,8 @@ public class Deliver : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    //When getting the package, the car will change color and the package will disappear from the map
+    //When delivering the package, the car will return to original color
     void OnTriggerEnter2D(Collider2D other) 
     {
         if(other.tag == "Package" && !hasPackage)
